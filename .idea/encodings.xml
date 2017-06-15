@@ -7,5 +7,6 @@
     <file url="file://$PROJECT_DIR$/demo-serverimpl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/proxy" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/proxy-spring" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
