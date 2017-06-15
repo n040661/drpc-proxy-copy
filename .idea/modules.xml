@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo-customer-spring/demo-customer-spring.iml" filepath="$PROJECT_DIR$/demo-customer-spring/demo-customer-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-server/demo-server.iml" filepath="$PROJECT_DIR$/demo-server/demo-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-serverimpl/demo-serverimpl.iml" filepath="$PROJECT_DIR$/demo-serverimpl/demo-serverimpl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drpc.proxy.copy.iml" filepath="$PROJECT_DIR$/drpc.proxy.copy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/proxy/proxy.iml" filepath="$PROJECT_DIR$/proxy/proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/proxy-spring/proxy-spring.iml" filepath="$PROJECT_DIR$/proxy-spring/proxy-spring.iml" />
+    </modules>
+  </component>
+</project>

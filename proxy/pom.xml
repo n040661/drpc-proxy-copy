@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>drpc.proxy.copy</artifactId>
+        <groupId>com.zph0000.demo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zph0000.demo</groupId>
+    <artifactId>proxy</artifactId>
+
+    <dependencies>
+        <!--Fastjson是一个Java语言编写的JSON处理器-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.30</version>
+        </dependency>
+
+        <!--apache-common-pool2，它对对象池化操作进行了很好的封装，我们只需要根据自己的业务需求重写或实现部分接口即可，使用它可以快速的创建一个方便，简单，强大对象连接池管理类-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+            <version>2.4.2</version>
+        </dependency>
+
+        <!--storm-->
+        <dependency>
+            <groupId>org.apache.storm</groupId>
+            <artifactId>storm-core</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+        <!--akka-->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_2.11</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
