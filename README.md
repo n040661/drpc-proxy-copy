@@ -1,45 +1,41 @@
 "# drpc-proxy-copy" 
-DRPC-ProxyÊÇ»ùÓÚÊ¹ÓÃstorm DRPCµÄRPC·şÎñ£¬½âñîÒµÎñ´úÂëÓëstorm¿ò¼Ü´úÂëµÄÒ»¸ö¼òµ¥¿ò¼Ü£»
-ÔÚÄ³Ğ©³¡¾°ÏÂ£¬ÓĞÊ¹ÓÃDRPCµ«²»×¢ÖØÊ¹ÓÃstormµÄÁ÷Ê½¼ÆËãµÄĞèÇó£¬Í¨³£Çé¿öÏÂÊ¹ÓÃDRPCServer×öÎª·şÎñÌá¹©·½½ÓÊÕÇëÇó£¬boltÖĞ´¦ÀíÒµÎñ£¬ReturnResults·µ»Ø½á¹û£»boltÖĞ»á½«ÒµÎñ´úÂëÓëstorm´úÂë½»Ö¯¡¢ñîºÏ£¬ÎªºóÆÚÉı¼¶¡¢À©Õ¹ÁôÏÂÄÑÌâ¡£
-DRPC-ProxyÌá¹©½âñîÒµÎñÓëstorm£¬·şÎñÏû·Ñ·½Ê¹ÓÃ¶¯Ì¬´úÀíÉúµ÷ÓÃDRPCClientÓëDRPCServerÍ¨Ñ¶£¬DRPCServer½«ÇëÇóÆ¥Åäµ½¶ÔÓ¦µÄ·şÎñÌá¹©·½£¬×îÖÕ½á¹ûÓÉDRPCServer·µ»Ø¸øÏû·Ñ·½¡£
+DRPC-Proxyæ˜¯åŸºäºä½¿ç”¨storm DRPCçš„RPCæœåŠ¡ï¼Œè§£è€¦ä¸šåŠ¡ä»£ç ä¸stormæ¡†æ¶ä»£ç çš„ä¸€ä¸ªç®€å•æ¡†æ¶ï¼›
+åœ¨æŸäº›åœºæ™¯ä¸‹ï¼Œæœ‰ä½¿ç”¨DRPCä½†ä¸æ³¨é‡ä½¿ç”¨stormçš„æµå¼è®¡ç®—çš„éœ€æ±‚ï¼Œé€šå¸¸æƒ…å†µä¸‹ä½¿ç”¨DRPCServeråšä¸ºæœåŠ¡æä¾›æ–¹æ¥æ”¶è¯·æ±‚ï¼Œboltä¸­å¤„ç†ä¸šåŠ¡ï¼ŒReturnResultsè¿”å›ç»“æœï¼›boltä¸­ä¼šå°†ä¸šåŠ¡ä»£ç ä¸stormä»£ç äº¤ç»‡ã€è€¦åˆï¼Œä¸ºåæœŸå‡çº§ã€æ‰©å±•ç•™ä¸‹éš¾é¢˜ã€‚
+DRPC-Proxyæä¾›è§£è€¦ä¸šåŠ¡ä¸stormï¼ŒæœåŠ¡æ¶ˆè´¹æ–¹ä½¿ç”¨åŠ¨æ€ä»£ç†ç”Ÿè°ƒç”¨DRPCClientä¸DRPCServeré€šè®¯ï¼ŒDRPCServerå°†è¯·æ±‚åŒ¹é…åˆ°å¯¹åº”çš„æœåŠ¡æä¾›æ–¹ï¼Œæœ€ç»ˆç»“æœç”±DRPCServerè¿”å›ç»™æ¶ˆè´¹æ–¹ã€‚
 
 
-### DRPC-Proxy ÌØµã
-* ½âñîstormÓëÒµÎñ´úÂë£¬¿ª·¢¹ı³ÌÖĞ¶ÔstormÎŞ¸ĞÖª
-* Ê¹ÓÃ¼òµ¥£¬µ¼Èëjar°ü£¬propertiesÖĞÌí¼ÓÏà¹Ø·şÎñµÄÅäÖÃ£¬pom.xmlÖĞÌí¼ÓÒÀÀµ¼°profile
-* Ö§³ÖÈıÖÖÄ£Ê½¿ª·¢£¬ÍÑÀëstorm½øĞĞÒµÎñ¿ª·¢-relyÄ£Ê½£¬LocalDRPCÄ£Ê½£¬RemoteÄ£Ê½
-* Ìá¹©spring»·¾³ÏÂµÄÖ§³Ö£¬ÎŞspringÒà¿É
-* Òì³£¿ÉÔ¶³ÌÅ×³ö
-* ¶ÔDRPCÎŞ·â×°£¬Ê¹ÓÃÔ­Éú´úÂëµ÷ÓÃ
-* ¼¯³ÉAKKA£¬±£Ö¤µ¥Ïß³ÌÏÂbolt¶Ô¸ß²¢·¢µÄÖ§³Ö
+### DRPC-Proxy ç‰¹ç‚¹
+* è§£è€¦stormä¸ä¸šåŠ¡ä»£ç ï¼Œå¼€å‘è¿‡ç¨‹ä¸­å¯¹stormæ— æ„ŸçŸ¥
+* ä½¿ç”¨ç®€å•ï¼Œå¯¼å…¥jaråŒ…ï¼Œpropertiesä¸­æ·»åŠ ç›¸å…³æœåŠ¡çš„é…ç½®ï¼Œpom.xmlä¸­æ·»åŠ ä¾èµ–åŠprofile
+* æ”¯æŒä¸‰ç§æ¨¡å¼å¼€å‘ï¼Œè„±ç¦»stormè¿›è¡Œä¸šåŠ¡å¼€å‘-relyæ¨¡å¼ï¼ŒLocalDRPCæ¨¡å¼ï¼ŒRemoteæ¨¡å¼
+* æä¾›springç¯å¢ƒä¸‹çš„æ”¯æŒï¼Œæ— springäº¦å¯
+* å¼‚å¸¸å¯è¿œç¨‹æŠ›å‡º
+* å¯¹DRPCæ— å°è£…ï¼Œä½¿ç”¨åŸç”Ÿä»£ç è°ƒç”¨
+* é›†æˆAKKAï¼Œä¿è¯å•çº¿ç¨‹ä¸‹boltå¯¹é«˜å¹¶å‘çš„æ”¯æŒ
 
-### Module ËµÃ÷
+### Module è¯´æ˜
 
-proxy : »ùÓÚ½Ó¿ÚµÄdrpcµ÷ÓÃ
+proxy : åŸºäºæ¥å£çš„drpcè°ƒç”¨
 
-proxy-spring : Ö§³Öspring»·¾³µÄ»ùÓÚ½Ó¿ÚµÄdrpcµ÷ÓÃ
+proxy-spring : æ”¯æŒspringç¯å¢ƒçš„åŸºäºæ¥å£çš„drpcè°ƒç”¨
 
-demo£º
+demoï¼š
 
-demo-customer : ·şÎñÏû·ÑÕß
+demo-customer-spring : springç¯å¢ƒæœåŠ¡æ¶ˆè´¹è€…
 
-demo-customer-spring : spring»·¾³·şÎñÏû·ÑÕß
+demo-server : æœåŠ¡æ¥å£
 
-demo-server : ·şÎñ½Ó¿Ú
+demo-serviceimpl : æœåŠ¡æä¾›è€…
 
-demo-serviceimpl : ·şÎñÌá¹©Õß
+### ç”¨æ³•(springç¯å¢ƒ)
 
-demo-serviceimpl-spring : spring»·¾³·şÎñÌá¹©Õß
-
-### ÓÃ·¨1(·Çspring»·¾³)
-
-### ·şÎñ½Ó¿ÚAPI
+### æœåŠ¡æ¥å£API
 ```
  public interface UserService {
     User getUser(String name) throws MyException;
 }
 ```
-### ·şÎñÌá¹©Õß
+### æœåŠ¡æä¾›è€…
 ```
 public class UserServiceImpl implements UserService {
     public User getUser(String name) throws MyException{
@@ -49,7 +45,7 @@ public class UserServiceImpl implements UserService {
             user.setId(111L);
             user.setName("tom");
         }else {
-            throw new MyOnlyException("ÒµÎñÒì³£");
+            throw new MyOnlyException("ä¸šåŠ¡å¼‚å¸¸");
         }
         return user;
     }
@@ -65,11 +61,11 @@ drpc.result.bolt.num=1
 drpc.spout.name=spout_name
 drpc.topology.name=topology_name
 ```
-#### Æô¶¯½Å±¾
+#### å¯åŠ¨è„šæœ¬
 ```
-storm jar provider.jar  com.zrk1000.proxy.ConfigMain drpcSpoutName topologyName
+storm jar provider.jar  com.zph0000.demo.ConfigMain drpcSpoutName topologyName
 ```
-### ·şÎñÏû·ÑÕß
+### æœåŠ¡æ¶ˆè´¹è€…
 ```
 public class Runner {
   public static void main(String[] args) {
@@ -92,8 +88,8 @@ drpc.client.port=3772
 drpc.client.timeout=50000
 
 topology.mapping.config.zrk1000-service-provider=\
-#    com.zrk1000.demo.service.TestService,\
-    com.zrk1000.demo.service.UserService
+#    com.zph0000.demo.service.TestService,\
+    com.zph0000.demo.service.UserService
 
 #topology.mapping.config.zrk1000-service-provider-spring=\
 #    com.zrk1000.demo.service.UserService
@@ -104,15 +100,15 @@ drpc.pattern=${profiles.pattern}
 
 ```
 
-### ÓÃ·¨2(spring»·¾³-springboot)
+### ç”¨æ³•2(springç¯å¢ƒ-springboot)
 
-### ·şÎñ½Ó¿ÚAPI
+### æœåŠ¡æ¥å£API
 ```
  public interface UserService {
     UserDto getUser(Long id);
 }
 ```
-### ·şÎñÌá¹©Õß
+### æœåŠ¡æä¾›è€…
 ```
 @Service
 @Transactional
@@ -128,8 +124,8 @@ public class UserServiceImpl implements UserService {
 ```
 #### drpcproxy-provider.properties
 ```
-#ÒµÎñËùÔÚµÄ°üÃû£¬Ê¹ÓÃAnnotationConfigApplicationContext´´½¨springÉÏÏÂÎÄ»·¾³ £¬½¨ÒéÊ¹ÓÃspringboot£¬¿ÉÖ§³Ö»ùÓÚxml¹¹½¨ÉÏÏÂÎÄ
-service.impls=com.zrk1000.demo
+#ä¸šåŠ¡æ‰€åœ¨çš„åŒ…åï¼Œä½¿ç”¨AnnotationConfigApplicationContextåˆ›å»ºspringä¸Šä¸‹æ–‡ç¯å¢ƒ ï¼Œå»ºè®®ä½¿ç”¨springbootï¼Œå¯æ”¯æŒåŸºäºxmlæ„å»ºä¸Šä¸‹æ–‡
+service.impls=com.zph0000.demo
 drpc.spout.num=1
 drpc.dispatch.bolt.num=1
 drpc.result.bolt.num=1
@@ -138,11 +134,11 @@ drpc.topology.name=topology_name
 
 
 ```
-#### Æô¶¯½Å±¾
+#### å¯åŠ¨è„šæœ¬
 ```
 storm jar provider.jar  com.zrk1000.proxy.SpringMain drpcSpoutName topologyName
 ```
-### ·şÎñÏû·ÑÕß
+### æœåŠ¡æ¶ˆè´¹è€…
 ```
 @RestController
 @RequestMapping("user")
@@ -176,7 +172,7 @@ topology.mapping.config.zrk1000-service-provider-spring=\
 ```
 @Profile({"local","remote"})
 @Configuration
-@ServiceScan(basePackages = "com.zrk1000.demo.service",
+@ServiceScan(basePackages = "com.zph0000.demo.service",
 //        excludeClasses = {UserService.class},
         rpcHandleBeanRef="stormDrpcHandle")
 public class StormConfig {
@@ -191,7 +187,7 @@ public class StormConfig {
             SpringBoltHandle springBoltHandle = new SpringBoltHandle(serviceImpls.toArray(new String[serviceImpls.size()]));
             drpcHandle = new StormLocalDrpcHandle(springBoltHandle);
         } catch (IOException e) {
-            throw new RuntimeException("³õÊ¼»¯stormDrpcHandleÊ§°Ü");
+            throw new RuntimeException("åˆå§‹åŒ–stormDrpcHandleå¤±è´¥");
         }
         return  drpcHandle;
     }
