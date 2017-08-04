@@ -53,8 +53,8 @@ public class UserServiceImpl implements UserService {
 #### drpcproxy-provider.properties
 ```
 service.impls=\
-#  com.zrk1000.demo.serviceimpl.TestServiceImpl,\
-  com.zrk1000.demo.serviceimpl.UserServiceImpl
+#  com.zph1000.demo.serviceimpl.TestServiceImpl,\
+  com.zph1000.demo.serviceimpl.UserServiceImpl
 drpc.spout.num=1
 drpc.dispatch.bolt.num=1
 drpc.result.bolt.num=1
@@ -87,12 +87,12 @@ drpc.client.host=192.168.1.81
 drpc.client.port=3772
 drpc.client.timeout=50000
 
-topology.mapping.config.zrk1000-service-provider=\
+topology.mapping.config.zph1000-service-provider=\
 #    com.zph0000.demo.service.TestService,\
     com.zph0000.demo.service.UserService
 
-#topology.mapping.config.zrk1000-service-provider-spring=\
-#    com.zrk1000.demo.service.UserService
+#topology.mapping.config.zph1000-service-provider-spring=\
+#    com.zph1000.demo.service.UserService
 
 #remote,local,rely
 drpc.pattern=${profiles.pattern}
@@ -136,7 +136,7 @@ drpc.topology.name=topology_name
 ```
 #### 启动脚本
 ```
-storm jar provider.jar  com.zrk1000.proxy.SpringMain drpcSpoutName topologyName
+storm jar provider.jar  com.zph1000.proxy.SpringMain drpcSpoutName topologyName
 ```
 ### 服务消费者
 ```
@@ -163,9 +163,9 @@ drpc.client.host=192.168.1.81
 drpc.client.port=3772
 drpc.client.timeout=5000
 
-topology.mapping.config.zrk1000-service-provider-spring=\
-#  com.zrk1000.demo.service.GroupService,\
-  com.zrk1000.demo.service.UserService
+topology.mapping.config.zph1000-service-provider-spring=\
+#  com.zph1000.demo.service.GroupService,\
+  com.zph1000.demo.service.UserService
 
 ```
 #### StormConfig

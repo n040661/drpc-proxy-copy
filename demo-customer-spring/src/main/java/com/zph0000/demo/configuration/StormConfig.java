@@ -28,20 +28,20 @@ import java.util.Set;
         rpcHandleBeanRef="stormDrpcHandle")
 public class StormConfig {
 
-//    @Profile("local")
-//    @Scope("singleton")
-//    @Bean("stormDrpcHandle")
-//    public RpcHandle getStormLocalRpcHandle(){
-//        StormLocalDrpcHandle drpcHandle = null;
-//        try {
-//            Set<String> serviceImpls = ServiceImplFactory.loadServiceImpls();
-//            SpringBoltHandle springBoltHandle = new SpringBoltHandle(serviceImpls.toArray(new String[serviceImpls.size()]));
-//            drpcHandle = new StormLocalDrpcHandle(springBoltHandle);
-//        } catch (IOException e) {
-//            throw new RuntimeException("初始化stormDrpcHandle失败");
-//        }
-//        return  drpcHandle;
-//    }
+    @Profile("local")
+    @Scope("singleton")
+    @Bean("stormDrpcHandle")
+    public RpcHandle getStormLocalRpcHandle(){
+        StormLocalDrpcHandle drpcHandle = null;
+        try {
+            Set<String> serviceImpls = ServiceImplFactory.loadServiceImpls();
+            SpringBoltHandle springBoltHandle = new SpringBoltHandle(serviceImpls.toArray(new String[serviceImpls.size()]));
+            drpcHandle = new StormLocalDrpcHandle(springBoltHandle);
+        } catch (IOException e) {
+            throw new RuntimeException("初始化stormDrpcHandle失败");
+        }
+        return  drpcHandle;
+    }
 
     @Bean
     @ConfigurationProperties("drpc.client")
